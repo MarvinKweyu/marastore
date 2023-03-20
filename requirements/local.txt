@@ -1,0 +1,26 @@
+-r base.txt
+
+# Code quality
+flake8==6.0.0
+flake8-isort==6.0.0
+coverage==7.2.1
+black==23.1.0
+pylint-django==2.5.3
+pylint-celery==0.3
+pre-commit==3.1.1
+
+
+# Testing
+mypy==1.0.1
+django-stubs==1.15.0
+pytest==7.2.2
+pytest-sugar==0.9.6
+djangorestframework-stubs==1.9.1
+
+
+# Django
+factory-boy==3.2.1
+django-debug-toolbar==3.8.1
+django-extensions==3.2.1
+django-coverage-plugin==3.0.0
+pytest-django==4.5.2

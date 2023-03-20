@@ -6,15 +6,15 @@
 {% endblock %}
 {% block content %}
 
-<div class="w-75 d-flex justify-content-center border-0 mt-1">
-        <form method="get"> 
-            <span class="text-center">
-                {{ product_search_form  | crispy}} 
-            </span>
-            {% csrf_token %}
-            
-        </form>
-        
+<div class="d-flex justify-content-center mt-2">
+    <form method="get" class="w-50">
+        <span class="text-center">
+            {{ product_search_form  | crispy}}
+        </span>
+         {% csrf_token %}
+
+    </form>
+
     </div>
 <div id="sidebar">
     <h3>Categories</h3>
@@ -30,8 +30,8 @@
     </ul>
 </div>
 <div id="main" class="product-list mt-2">
-    
-    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
+
+    <h1>{% if category %}{{ category.name }}{% endif %}</h1>
     {% for product in products %}
     <div class="item">
         <a href="{{ product.get_absolute_url }}">

@@ -13,11 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.contrib import admin
+from django.urls import include, path
 
 admin.site.site_header = "Mara Nomads - Store Administrator"
 admin.site.site_title = "Mara Nomads - Store Admin Portal"
@@ -25,6 +24,7 @@ admin.site.index_title = "Welcome to Mara Nomads - Store Portal"
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("accounts/", include("allauth.urls")),
     path("cart", include("cart.urls", namespace="cart")),
     path("orders/", include("orders.urls", namespace="orders")),
     path("payment/", include("payment.urls", namespace="payment")),

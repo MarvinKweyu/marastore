@@ -1,5 +1,5 @@
 services:
-  
+
   db:
     image: postgres:13.0-alpine
     container_name: maranomadstore_local_postgres

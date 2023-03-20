@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("coupons", "0001_initial"),
         ("orders", "0003_alter_order_options"),

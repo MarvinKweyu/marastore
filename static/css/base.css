@@ -155,7 +155,7 @@ ul.errorlist {
 }
 
 #content {
-    padding: 0 100px;
+    /* padding: 0 100px; */
     overflow: hidden;
 }
 

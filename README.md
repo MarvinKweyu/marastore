@@ -28,7 +28,7 @@ The MaraNomads Shopping experience
 :heavy_check_mark: Recommendation engine for products that go well with others
 
 
-## Setup 
+## Setup
 ---
 
 ### Bare metal
@@ -69,14 +69,14 @@ Then access the task list queue on *localhost:5555*
 
 With *docker* and *docker-compose* installed , clone the repo and run the following command at the root of the project.
 ```bash
-docker-compose -f docker-compose.yml up -d --build
+docker-compose -f local.yaml up -d --build
 
 ```
 
 **Production**
 
 ```bash
-docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f production.yaml up -d --build
 
 ```
 
