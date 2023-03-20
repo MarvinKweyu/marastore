@@ -9,7 +9,7 @@ The MaraNomads Shopping experience
     - [Bare metal](#bare-metal)
       - [Base requirements](#base-requirements)
       - [Running message brokers;](#running-message-brokers)
-    - [It just works(Docker)  - WIP](#it-just-worksdocker----wip)
+    - [Docker](#docker)
 
 
 ## Core features
@@ -63,7 +63,7 @@ To monitor asynchronous tasks i.e task statistics
 celery -A maranomadstore flower
 ```
 Then access the task list queue on *localhost:5555*
-### It just works(Docker)  - WIP
+### Docker
 
 **Development**
 

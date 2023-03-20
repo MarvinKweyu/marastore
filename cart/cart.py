@@ -8,7 +8,7 @@ from duka.models import Product
 
 class Cart(object):
     def __init__(self, request):
-        """INitialize cart"""
+        """Initialize cart"""
         self.session = request.session
         # attempt get from session
         cart = self.session.get(settings.CART_SESSION_ID)
