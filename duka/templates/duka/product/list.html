@@ -1,9 +1,21 @@
 {% extends "duka/base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block title %}
 {% if category %}{{ category.name }}{% else %}Products{% endif %}
 {% endblock %}
 {% block content %}
+
+<div class="w-75 d-flex justify-content-center border-0 mt-1">
+        <form method="get"> 
+            <span class="text-center">
+                {{ product_search_form  | crispy}} 
+            </span>
+            {% csrf_token %}
+            
+        </form>
+        
+    </div>
 <div id="sidebar">
     <h3>Categories</h3>
     <ul>
@@ -17,7 +29,8 @@
         {% endfor %}
     </ul>
 </div>
-<div id="main" class="product-list">
+<div id="main" class="product-list mt-2">
+    
     <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
     {% for product in products %}
     <div class="item">
