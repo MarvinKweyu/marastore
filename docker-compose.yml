@@ -1,0 +1,75 @@
+services:
+  
+  db:
+    image: postgres:13.0-alpine
+    container_name: maradomadstore_local_postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=maradomadstore
+      - POSTGRES_PASSWORD=maradomadstore
+      - POSTGRES_DB=maradomadstore_dev
+  rabbit:
+    hostname: rabbit
+    image: rabbitmq:3.6.9
+    container_name: maradomadstore_local_rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=mypass
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  redis:
+    image: redis:6
+    container_name: maradomadstore_local_redis
+  web: &web
+    build: .
+    image: maradomadstore_local_web
+    container_name: maradomadstore_local_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/maradomadstore/
+    ports:
+      - 8000:8000
+    # env_file:
+    #   - ./.env.dev
+    # environment:
+    #   - name=value
+    links:
+      - db
+      - rabbit
+    depends_on:
+      - db
+      - redis
+      - rabbit
+  celeryworker:
+    <<: *web
+    image: maradomadstore_local_celeryworker
+    container_name: maradomadstore_local_celeryworker
+    depends_on:
+      - redis
+      - db
+    ports: []
+    command: /start-celeryworker
+
+  celerybeat:
+    <<: *web
+    image: maradomadstore_local_celerybeat
+    container_name: maradomadstore_local_celerybeat
+    depends_on:
+      - redis
+      - db
+    ports: []
+    command: /start-celerybeat
+
+  flower:
+    <<: *web
+    image: maradomadstore_local_flower
+    container_name: maradomadstore_local_flower
+    ports:
+      - "5555:5555"
+    command: /start-flower
+
+# persist data beyond life of container
+volumes:
+  postgres_data:
