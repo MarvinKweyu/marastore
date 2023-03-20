@@ -54,13 +54,13 @@ sudo rabbitmq-server
 On a different terminal, launch celery
 
 ```bash
-celery -A maradomadstore worker -l info
+celery -A maranomadstore worker -l info
 
 ```
 
 To monitor asynchronous tasks i.e task statistics
 ```bash
-celery -A maradomadstore flower
+celery -A maranomadstore flower
 ```
 Then access the task list queue on *localhost:5555*
 ### It just works(Docker)  - WIP

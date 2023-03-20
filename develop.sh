@@ -7,10 +7,10 @@
 # stop in case anything fails
 set -e
 
-# setup maradomadstore database
-DB_NAME=${1:-maradomadstore}
-DB_USER=${2:-maradomadstore}
-DB_USER_PASS=${3:-maradomadstore}
+# setup maranomadstore database
+DB_NAME=${1:-maranomadstore}
+DB_USER=${2:-maranomadstore}
+DB_USER_PASS=${3:-maranomadstore}
 sudo su p <<EOF
 createdb  $DB_NAME;
 psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_USER_PASS';"

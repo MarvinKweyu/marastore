@@ -1,4 +1,4 @@
-"""maradomadstore URL Configuration
+"""maranomadstore URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -19,9 +19,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-admin.site.site_header = "maradomadstore Administrator"
-admin.site.site_title = "maradomadstore Admin Portal"
-admin.site.index_title = "Welcome to maradomadstore Portal"
+admin.site.site_header = "maranomadstore Administrator"
+admin.site.site_title = "maranomadstore Admin Portal"
+admin.site.index_title = "Welcome to maranomadstore Portal"
 
 urlpatterns = [
     path("admin/", admin.site.urls),

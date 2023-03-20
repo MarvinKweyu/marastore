@@ -31,7 +31,7 @@ msgid "My Duka"
 msgstr ""
 
 #: duka/templates/duka/base.html:12
-msgid "maradomadstore"
+msgid "maranomadstore"
 msgstr ""
 
 #: duka/templates/duka/base.html:20
@@ -56,10 +56,10 @@ msgstr ""
 msgid "Add to cart"
 msgstr ""
 
-#: maradomadstore/settings.py:127
+#: maranomadstore/settings.py:127
 msgid "English"
 msgstr "Inglés"
 
-#: maradomadstore/settings.py:128
+#: maranomadstore/settings.py:128
 msgid "Spanish"
 msgstr "Español"

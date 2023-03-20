@@ -2,17 +2,17 @@ services:
   
   db:
     image: postgres:13.0-alpine
-    container_name: maradomadstore_local_postgres
+    container_name: maranomadstore_local_postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=maradomadstore
-      - POSTGRES_PASSWORD=maradomadstore
-      - POSTGRES_DB=maradomadstore_dev
+      - POSTGRES_USER=maranomadstore
+      - POSTGRES_PASSWORD=maranomadstore
+      - POSTGRES_DB=maranomadstore_dev
   rabbit:
     hostname: rabbit
     image: rabbitmq:3.6.9
-    container_name: maradomadstore_local_rabbitmq
+    container_name: maranomadstore_local_rabbitmq
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=mypass
@@ -21,14 +21,14 @@ services:
       - "15672:15672"
   redis:
     image: redis:6
-    container_name: maradomadstore_local_redis
+    container_name: maranomadstore_local_redis
   web: &web
     build: .
-    image: maradomadstore_local_web
-    container_name: maradomadstore_local_web
+    image: maranomadstore_local_web
+    container_name: maranomadstore_local_web
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/usr/src/maradomadstore/
+      - .:/usr/src/maranomadstore/
     ports:
       - 8000:8000
     # env_file:
@@ -44,8 +44,8 @@ services:
       - rabbit
   celeryworker:
     <<: *web
-    image: maradomadstore_local_celeryworker
-    container_name: maradomadstore_local_celeryworker
+    image: maranomadstore_local_celeryworker
+    container_name: maranomadstore_local_celeryworker
     depends_on:
       - redis
       - db
@@ -54,8 +54,8 @@ services:
 
   celerybeat:
     <<: *web
-    image: maradomadstore_local_celerybeat
-    container_name: maradomadstore_local_celerybeat
+    image: maranomadstore_local_celerybeat
+    container_name: maranomadstore_local_celerybeat
     depends_on:
       - redis
       - db
@@ -64,8 +64,8 @@ services:
 
   flower:
     <<: *web
-    image: maradomadstore_local_flower
-    container_name: maradomadstore_local_flower
+    image: maranomadstore_local_flower
+    container_name: maranomadstore_local_flower
     ports:
       - "5555:5555"
     command: /start-flower

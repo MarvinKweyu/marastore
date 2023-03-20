@@ -13,9 +13,9 @@ def payment_completed(order_id):
     """Send an e-mail notification when an order is created successfully"""
     order = Order.objects.get(id=order_id)
     # create mail
-    subject = f"maradomadstore - EE Invoice no. {order.id}"
+    subject = f"maranomadstore - EE Invoice no. {order.id}"
     message = "Please , find attached the invoice for your recent purchase."
-    email = EmailMessage(subject, message, "admin.maradomadstore.com", [order.email])
+    email = EmailMessage(subject, message, "admin.maranomadstore.com", [order.email])
     # generate pdf and output to BytesIO instance - in-memory bytes buffer
     html = render_to_string("orders/order/pdf.html", {"order", order})
     out = BytesIO()

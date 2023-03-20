@@ -1,1 +1,1 @@
-from maradomadstore.celery import app as celery_app
+from maranomadstore.celery import app as celery_app

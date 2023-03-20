@@ -2,7 +2,7 @@
 FROM python:3.9.6-alpine
 
 # set working directory
-WORKDIR /usr/src/maradomadstore
+WORKDIR /usr/src/maranomadstore
 
 # environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -21,11 +21,11 @@ RUN pip install -r requirements.txt
 
 # copy entrypoint
 COPY ./entrypoint.sh .
-RUN sed -i 's/\r$//g' /usr/src/maradomadstore/entrypoint.sh
-RUN chmod +x /usr/src/maradomadstore/entrypoint.sh
+RUN sed -i 's/\r$//g' /usr/src/maranomadstore/entrypoint.sh
+RUN chmod +x /usr/src/maranomadstore/entrypoint.sh
 # copy project
 COPY . .
-RUN ls /usr/src/maradomadstore
+RUN ls /usr/src/maranomadstore
 
 # run entrypoint
-ENTRYPOINT [ "/usr/src/maradomadstore/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/src/maranomadstore/entrypoint.sh" ]
