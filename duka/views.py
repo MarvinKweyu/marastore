@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
 from django.shortcuts import get_object_or_404, render
 
@@ -37,6 +38,12 @@ def product_list(request, category_slug=None):
                     .filter(search=search_query)
                     .order_by("-rank")
                 )
+
+                # if product search has no results, return all products
+                messages.warning(request, "No product matching your search was found")
+
+                if not products:
+                    products = Product.objects.filter(available=True)
     return render(
         request,
         "duka/product/list.html",
