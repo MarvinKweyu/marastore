@@ -145,7 +145,7 @@ MIDDLEWARE = [
 
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATIC_URL = "static/"
-STATICFILES_DIRS = [BASE_DIR / "staticfiles"]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "staticfiles"),)
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
@@ -157,7 +157,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "maranomadstore/templates/")],
+        "DIRS": [os.path.join(BASE_DIR, "templates/")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
