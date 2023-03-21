@@ -21,7 +21,7 @@ class CustomUser(AbstractUser):
             str: URL for user detail.
 
         """
-        return reverse("users:detail", kwargs={"username": self.username})
+        return reverse("customuser:detail", kwargs={"username": self.username})
 
     def __str__(self):
         return self.username

@@ -144,24 +144,20 @@ MIDDLEWARE = [
 # STATIC
 
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR / "staticfiles"]
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 # MEDIA
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
-print("\n\n")
-
-print(os.path.join(BASE_DIR, "templates/"))
-
-print("\n\n")
-
 # TEMPLATES
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates/")],
+        "DIRS": [os.path.join(BASE_DIR, "maranomadstore/templates/")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -224,9 +220,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # PAYMENTS
 BRAINTREE_CONF = braintree.Configuration(
     environment=braintree.Environment.Sandbox,
-    merchant_id=env("BRAINTREE_MERCHANT_ID"),
-    public_key=env("BRAINTREE_PUBLIC_KEY"),
-    private_key=env("BRAINTREE_PRIVATE_KEY"),
+    merchant_id="123",
+    public_key="123",
+    private_key="12345",
+    # merchant_id=env("BRAINTREE_MERCHANT_ID"),
+    # public_key=env("BRAINTREE_PUBLIC_KEY"),
+    # private_key=env("BRAINTREE_PRIVATE_KEY"),
 )
 
 CART_SESSION_ID = "cart"

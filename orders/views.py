@@ -64,3 +64,7 @@ def admin_order_pdf(request, order_id):
         response, stylesheets=[weasyprint.CSS(settings.STATIC_ROOT + "css/pdf.css")]
     )
     return response
+
+# orders/ without anything
+# option 1: redirect user to home page 
+# or require user to be logged in, check login status and redirect to login page or create order page
