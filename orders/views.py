@@ -37,6 +37,8 @@ def order_create(request):
                 order_created.delay(order.id)
                 # set order insession
                 request.session["order_id"] = order.id
+                #  clear the form
+                order_form = OrderCreateForm()
                 # go to payment
                 return redirect(reverse("payment:process"))
                 # return render(request, "orders/order/created.html", {"order": order})
@@ -65,6 +67,7 @@ def admin_order_pdf(request, order_id):
     )
     return response
 
+
 # orders/ without anything
-# option 1: redirect user to home page 
+# option 1: redirect user to home page
 # or require user to be logged in, check login status and redirect to login page or create order page

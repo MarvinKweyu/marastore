@@ -34,10 +34,11 @@ The MaraNomads Shopping experience
 ### Bare metal
 #### Base requirements
 
-Install the following dependencies before running the `develop` bash script.
+Install the following dependencies **before** running the `develop` bash script.
 
 - Postgresql
 - RabbitMQ
+- Redi
 - Weasyprint
 
 Setup a virtual environment, install requirements , run migrations and run the server

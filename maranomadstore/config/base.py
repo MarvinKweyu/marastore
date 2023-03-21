@@ -153,11 +153,15 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
+print("\n\n\n")
+print(os.path.join(BASE_DIR.parent, "templates/"))
+print("\n\n\n")
+
 # TEMPLATES
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates/")],
+        "DIRS": [os.path.join(BASE_DIR.parent, "templates/")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

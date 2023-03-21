@@ -3,7 +3,7 @@ import os
 from celery import Celery
 
 # django settings module for prog
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "maranomadstore.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "maranomadstore.config.local")
 app = Celery("maranomadstore")
 
 app.config_from_object("django.conf:settings", namespace="CELERY")
