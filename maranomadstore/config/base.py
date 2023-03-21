@@ -153,10 +153,6 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
-print("\n\n\n")
-print(os.path.join(BASE_DIR.parent, "templates/"))
-print("\n\n\n")
-
 # TEMPLATES
 TEMPLATES = [
     {

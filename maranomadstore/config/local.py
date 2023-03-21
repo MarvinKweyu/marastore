@@ -22,6 +22,17 @@ CACHES = {
     }
 }
 
+# DATABASES
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "marastore",
+        "USER": "marvin",
+        "PASSWORD": "",
+    }
+}
+
+
 # EMAIL
 # ------------------------------------------------------------------------------
 
