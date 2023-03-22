@@ -166,6 +166,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "cart.context_processors.cart",
+                "orders.context_processors.user_has_orders",
                 "accounts.context_processors.allauth_settings",
             ],
         },
@@ -220,12 +221,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # PAYMENTS
 BRAINTREE_CONF = braintree.Configuration(
     environment=braintree.Environment.Sandbox,
-    merchant_id="123",
-    public_key="123",
-    private_key="12345",
-    # merchant_id=env("BRAINTREE_MERCHANT_ID"),
-    # public_key=env("BRAINTREE_PUBLIC_KEY"),
-    # private_key=env("BRAINTREE_PRIVATE_KEY"),
+    merchant_id=env("BRAINTREE_MERCHANT_ID"),
+    public_key=env("BRAINTREE_PUBLIC_KEY"),
+    private_key=env("BRAINTREE_PRIVATE_KEY"),
 )
 
 CART_SESSION_ID = "cart"

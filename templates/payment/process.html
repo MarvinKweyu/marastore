@@ -1,19 +1,31 @@
 {% extends "base.html" %}
 {% block title %}Pay by credit card{% endblock %}
 {% block content %}
+<div class="card p-4">
     <h1>Pay by credit card</h1>
     <form id="payment" method="post">
-        <label for="card-number">Card Number</label>
-        <div id="card-number" class="field"></div>
-        <label for="cvv">CVV</label>
-        <div id="cvv" class="field"></div>
-        <label for="expiration-date">Expiration Date</label>
+         <div class="mb-3">
+            <label for="card-number" class="form-label">Card Number</label>
+            <div id="card-number" class="field"></div>
+        </div>
 
-        <div id="expiration-date" class="field"></div>
+        <div class="mb-3">
+            <label for="cvv" class="form-label">CVV</label>
+            <div id="cvv" class="field"></div>
+        </div>
+
+        <div class="mb-3">
+
+            <label for="expiration-date" class="form-label">Expiration Date</label>
+
+            <div id="expiration-date" class="field"></div>
+        </div>
+
         <input type="hidden" id="nonce" name="payment_method_nonce" value="">
         {% csrf_token %}
         <input type="submit" value="Pay">
     </form>
+    </div>
     <!-- includes the Braintree JS client SDK -->
     <script src="https://js.braintreegateway.com/web/3.44.2/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.44.2/js/hosted-fields.min.js"></script>
@@ -30,20 +42,62 @@
         braintree.hostedFields.create({
             client: clientInstance,
             styles: {
-            'input': {'font-size': '13px'},
+            'input': {'font-size': '14px'},
             'input.invalid': {'color': 'red'},
             'input.valid': {'color': 'green'}
             },
             fields: {
-            number: {selector: '#card-number'},
-            cvv: {selector: '#cvv'},
-            expirationDate: {selector: '#expiration-date'}
+                number: {selector: '#card-number', placeholder: '4111 1111 1111 1111'},
+                cvv: {selector: '#cvv',  placeholder: '123'},
+                expirationDate: {selector: '#expiration-date'}
             }
         }, function (hostedFieldsErr, hostedFieldsInstance) {
             if (hostedFieldsErr) {
             console.error(hostedFieldsErr);
             return;
             }
+            hostedFieldsInstance.on('validityChange', function (event) {
+                let field = event.fields[event.emittedBy];
+
+                if (field.isValid) {
+                    if (event.emittedBy === 'expirationMonth' || event.emittedBy === 'expirationYear') {
+                    if (!event.fields.expirationMonth.isValid || !event.fields.expirationYear.isValid) {
+                        return;
+                    }
+                    } else if (event.emittedBy === 'number') {
+                    $('#card-number').next('span').text('');
+                    }
+
+                    // Remove any previously applied error or warning classes
+                    $(field.container).parents('.form-group').removeClass('has-warning');
+                    $(field.container).parents('.form-group').removeClass('has-success');
+                    // Apply styling for a valid field
+                    $(field.container).parents('.form-group').addClass('has-success');
+                } else if (field.isPotentiallyValid) {
+                    // Remove styling  from potentially valid fields
+                    $(field.container).parents('.form-group').removeClass('has-warning');
+                    $(field.container).parents('.form-group').removeClass('has-success');
+                    if (event.emittedBy === 'number') {
+                    $('#card-number').next('span').text('');
+                    }
+                } else {
+                    // Add styling to invalid fields
+                    $(field.container).parents('.form-group').addClass('has-warning');
+                    // Add helper text for an invalid card number
+                    if (event.emittedBy === 'number') {
+                    $('#card-number').next('span').text('Looks like this card number has an error.');
+                    }
+                }
+                });
+
+            hostedFieldsInstance.on('cardTypeChange', function (event) {
+                // Handle a field's change, such as a change in validity or credit card type
+                if (event.cards.length === 1) {
+                    $('#card-type').text(event.cards[0].niceType);
+                } else {
+                    $('#card-type').text('Card');
+                }
+            });
             submit.removeAttribute('disabled');
             form.addEventListener('submit', function (event) {
                 event.preventDefault();

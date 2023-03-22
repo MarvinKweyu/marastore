@@ -5,6 +5,8 @@ from celery import shared_task
 from django.conf import settings
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
+
+from accounts.models import CustomUser
 from orders.models import Order
 
 
@@ -12,10 +14,11 @@ from orders.models import Order
 def payment_completed(order_id):
     """Send an e-mail notification when an order is created successfully"""
     order = Order.objects.get(id=order_id)
+    user_email = CustomUser.objects.get(id=order.user)
     # create mail
     subject = f"maranomadstore - EE Invoice no. {order.id}"
     message = "Please , find attached the invoice for your recent purchase."
-    email = EmailMessage(subject, message, "admin.maranomadstore.com", [order.email])
+    email = EmailMessage(subject, message, "admin.maranomadstore.com", [user_email])
     # generate pdf and output to BytesIO instance - in-memory bytes buffer
     html = render_to_string("orders/order/pdf.html", {"order", order})
     out = BytesIO()

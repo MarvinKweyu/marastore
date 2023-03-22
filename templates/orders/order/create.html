@@ -1,33 +1,46 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load crispy_forms_tags %}
-{% block title %}{% trans "Checkout" %}{% endblock %}
+{% block title %}{% trans "Checkout - Delivery Address" %}{% endblock %}
 {% block content %}
-<h1>{% trans "Checkout" %}</h1>
-<div class="order-info">
-    <h3>{% trans "Your order" %}</h3>
-    <ul>
-        {% for item in cart %}
-        <li>
-            {{ item.quantity }}x {{ item.product.name }}
-            <span>${{ item.total_price| floatformat:2 }}</span>
-        </li>
-        {% endfor %}
+<h2>{% trans "Checkout - Delivery Address" %}</h2>
+<div class="row">
 
-        {% if cart.coupon %}
-        <li>
-            {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
-            "{{ code }}" ({{ discount }}% off)
-            <span class="neg">- ${{ cart.get_discount|floatformat:2 }}</span>
-            {% endblocktrans %}
-        </li>
-        {% endif %}
-    </ul>
-    <p>{% trans "Total" %}: ${{ cart.get_total_price_after_discount | floatformat:2 }}</p>
+    <div class="col-6">
+        <form method="post" class="order-form w-50">
+            {{ form | crispy}}
+            <p><input type="submit" value="{% trans "Place order" %}"></p>
+            {% csrf_token %}
+        </form>
+    </div>
+
+    <div class="col-6">
+        <div class="order-info rounded" style="width: 30vw;">
+            <h3>{% trans "Your order" %}</h3>
+            <ul class="list-group ">
+                {% for item in cart %}
+                <li class="">
+                    {{ item.quantity }} X {{ item.product.name }}
+                    <span>${{ item.total_price| floatformat:2 }}</span>
+                </li>
+                {% endfor %}
+
+                {% if cart.coupon %}
+                <li class="">
+                    {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+                    "{{ code }}" ({{ discount }}% off)
+                    <span class="neg">- ${{ cart.get_discount|floatformat:2 }}</span>
+                    {% endblocktrans %}
+                </li>
+                {% endif %}
+            </ul>
+            <p>{% trans "Total" %}: ${{ cart.get_total_price_after_discount | floatformat:2 }}</p>
+        </div>
+
+    </div>
+
+
+
+
 </div>
-<form method="post" class="order-form w-50">
-    {{ form | crispy}}
-    <p><input type="submit" value="{% trans "Place order" %}"></p>
-    {% csrf_token %}
-</form>
 {% endblock %}

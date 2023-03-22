@@ -1,5 +1,6 @@
 import braintree
 from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -36,9 +37,15 @@ def payment_process(request):
             order.save()
             # launch asyn task
             payment_completed.delay(order.id)
-            return redirect("payment:done")
+            messages.success(
+                request,
+                f"Your order has been created successfully: Order id {order.id}",
+            )
+
+            return redirect("duka:product_list")
         else:
-            return redirect("payment:canceled")
+            messages.warning(request, "There was an error processing your order")
+            return redirect("duka:product_list")
     else:
         # generate token
         client_token = gateway.client_token.generate()
@@ -47,11 +54,3 @@ def payment_process(request):
             "payment/process.html",
             {"order": order, "client_token": client_token},
         )
-
-@login_required
-def payment_done(request):
-    return render(request, "payment/done.html")
-
-@login_required
-def payment_canceled(request):
-    return render(request, "payment/canceled.html")
