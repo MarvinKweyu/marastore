@@ -25,8 +25,8 @@
     </ul>
     <p>{% trans "Total" %}: ${{ cart.get_total_price_after_discount | floatformat:2 }}</p>
 </div>
-<form method="post" class="order-form">
-    {{ form.as_p }}
+<form method="post" class="order-form w-50">
+    {{ form | crispy}}
     <p><input type="submit" value="{% trans "Place order" %}"></p>
     {% csrf_token %}
 </form>

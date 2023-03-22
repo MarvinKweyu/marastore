@@ -1,6 +1,7 @@
 import weasyprint
 from django.conf import settings
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template.loader import render_to_string
@@ -12,8 +13,13 @@ from orders.models import Order, OrderItem
 from orders.tasks import order_created
 
 
+@login_required
 def order_create(request):
     """Create an order view"""
+
+    if not request.user.is_authenticated:
+        return redirect("account_login")
+
     cart = Cart(request)
 
     if request.method == "POST":

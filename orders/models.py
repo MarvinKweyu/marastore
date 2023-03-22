@@ -5,17 +5,17 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from duka.models import Product
+from accounts.models import CustomUser
 
 
 class Order(models.Model):
     """Manage all orders across the system"""
 
-    first_name = models.CharField(_("first name"), max_length=50)
-    last_name = models.CharField(_("last name"), max_length=50)
-    email = models.EmailField(_("e-mail"))
+    user = models.ForeignKey(CustomUser, related_name="orders", on_delete=models.CASCADE)
+    city = models.CharField(_("city"), max_length=250)
     address = models.CharField(_("address"), max_length=250)
     postal_code = models.CharField(_("postal code"), max_length=50)
-    city = models.CharField(_("city"), max_length=250)
+    description = models.TextField(_("description"), blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)

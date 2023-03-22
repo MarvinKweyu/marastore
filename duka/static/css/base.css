@@ -235,6 +235,18 @@ ul.errorlist {
 .order-form {
     float: left;
 }
+input[type="text"],
+textarea {
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+}
 
 .order-info {
     float: right;
