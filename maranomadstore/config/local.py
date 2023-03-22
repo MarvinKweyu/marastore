@@ -35,11 +35,7 @@ DATABASES = {
 
 # EMAIL
 # ------------------------------------------------------------------------------
-
-EMAIL_BACKEND = env(
-    "DJANGO_EMAIL_BACKEND",
-    default="django.core.mail.backends.smtp.EmailBackend",
-)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # WhiteNoise
 # ------------------------------------------------------------------------------
 # http://whitenoise.evans.io/en/latest/django.html#using-whitenoise-in-development

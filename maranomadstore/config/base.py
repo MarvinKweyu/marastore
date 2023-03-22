@@ -194,7 +194,7 @@ SOCIALACCOUNT_FORMS = {"signup": "accounts.forms.UserSocialSignupForm"}
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
 AUTH_USER_MODEL = "accounts.CustomUser"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = "accounts:redirect"
+LOGIN_REDIRECT_URL = "duka:product_list"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
 LOGIN_URL = "account_login"
 

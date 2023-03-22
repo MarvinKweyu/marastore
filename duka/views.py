@@ -39,10 +39,10 @@ def product_list(request, category_slug=None):
                     .order_by("-rank")
                 )
 
-                # if product search has no results, return all products
-                messages.warning(request, "No product matching your search was found")
 
                 if not products:
+                    # if product search has no results, return all products
+                    messages.warning(request, "No product matching your search was found")
                     products = Product.objects.filter(available=True)
     return render(
         request,
