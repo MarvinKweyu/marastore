@@ -17,15 +17,13 @@ from orders.tasks import order_created
 def order_create(request):
     """Create an order view"""
 
-    if not request.user.is_authenticated:
-        return redirect("account_login")
-
     cart = Cart(request)
 
     if request.method == "POST":
         order_form = OrderCreateForm(request.POST)
         if order_form.is_valid():
             order = order_form.save(commit=False)
+            order.user = request.user
             if cart.coupon:
                 order.coupon = cart.coupon
                 order.discount = cart.coupon.discount
@@ -47,7 +45,6 @@ def order_create(request):
                 order_form = OrderCreateForm()
                 # go to payment
                 return redirect(reverse("payment:process"))
-                # return render(request, "orders/order/created.html", {"order": order})
 
     else:
         form = OrderCreateForm()
@@ -72,8 +69,3 @@ def admin_order_pdf(request, order_id):
         response, stylesheets=[weasyprint.CSS(settings.STATIC_ROOT + "css/pdf.css")]
     )
     return response
-
-
-# orders/ without anything
-# option 1: redirect user to home page
-# or require user to be logged in, check login status and redirect to login page or create order page

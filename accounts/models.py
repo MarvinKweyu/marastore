@@ -47,6 +47,10 @@ class Profile(models.Model):
         ("P", "Prefer not to say"),
     )
     gender = models.CharField(max_length=1, choices=CHOICES, default="P")
+    # TODo: Add more fields
+    # city = models.CharField(_("city"), max_length=250)
+    # address = models.CharField(_("address"), max_length=250)
+    # postal_code = models.CharField(_("postal code"), max_length=50)
     date_of_birth = models.DateField(null=True, blank=True)
 
     def __str__(self):
