@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
 <div class="product-detail mt-3">
-    <img class="rounded" src="{% if product.image %}{{ product.image.url }}{% else %} {% static "img/no_image.png" %}{% endif %}">
+    <img class="rounded-1" height="400px" width="250px" src="{% if product.image %}{{ product.image.url }}{% else %} {% static "img/no_image.png" %}{% endif %}">
     <h1>{{ product.name }}</h1>
     <h2>
     <a href="{{ product.category.get_absolute_url }}">
@@ -28,7 +28,7 @@
             {% for p in recommended_products %}
             <div class="item">
                 <a href="{{ p.get_absolute_url }}">
-                   <img class="rounded" src="{% if p.image %}{{ p.image.url }}{% else %}{% static  "img/no_image.png" %}{% endif %}">
+                   <img class="rounded" height="200px" width="200px" src="{% if p.image %}{{ p.image.url }}{% else %}{% static  "img/no_image.png" %}{% endif %}">
                 </a>
                 <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
             </div>
