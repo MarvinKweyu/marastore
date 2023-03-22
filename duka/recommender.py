@@ -10,7 +10,7 @@ r = redis.Redis(
 )
 
 
-class Recommender(object):
+class Recommender:
     """Recommend a product based on previous purchases"""
 
     def get_product_key(self, id):
@@ -52,9 +52,11 @@ class Recommender(object):
             The maximum number of recommendations to return
         """
         product_ids = [p.id for p in products]
+        print(f"\n\n\n\n Product detail: {products}")
         if len(products) == 1:
             # one product
-            # get ids of products that were bought with the given product ordered by the number of times they were bought together
+            # get ids of products that were bought with the given product ordered by
+            # the number of times they were bought together
             suggestions = r.zrange(
                 self.get_product_key(product_ids[0]), 0, -1, desc=True
             )[:max_results]
@@ -68,12 +70,15 @@ class Recommender(object):
             # combine sum of all scores for items in sorted set of each product
             r.zunionstore(tmp_key, keys)
             # remove ids for the products the recommendation is for
-            # i.e if searching for recommendations for product xyz and product xyz is contained as one of the items being recommended, remove it
+            # i.e if searching for recommendations for product xyz and product xyz is
+            # contained as one of the items being recommended, remove it
             r.zrem(tmp_key, *product_ids)
             # get the product ids by their score, descendant sort
             suggestions = r.zrange(tmp_key, 0, -1, desc=True)[:max_results]
             # remove temporary key
             r.delete(tmp_key)
+
+        print(f"\n\n\n\n Suggested products: {suggestions} \n\n\n\n")
         suggested_product_ids = [int(id) for id in suggestions]
         # get prodcts and sort by order of appearence
         suggested_products = list(Product.objects.filter(id__in=suggested_product_ids))

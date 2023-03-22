@@ -1,7 +1,6 @@
 from celery import shared_task
 from django.core.mail import send_mail
 
-from accounts.models import CustomUser
 from orders.models import Order
 
 
@@ -11,10 +10,9 @@ def order_created(order_id):
     Send an email notification when an order is successfully created
     """
     order = Order.objects.get(id=order_id)
-    user = CustomUser.objects.get(id=order.user)
     subject = f"Order nr.{order.id}"
-    message = f"Dear {order.first_name}, \n\n You have successfully placed an order. Your order ID is {order.id}"
+    message = f"Dear {order.user.name}, \n\n You have successfully placed an order. Your order ID is {order.id}"
     from_email = "admin.maranomadstore.com"
-    recipient_list = [user.email]
+    recipient_list = [order.user.email]
     mail_sent = send_mail(subject, message, from_email, recipient_list)
     return mail_sent

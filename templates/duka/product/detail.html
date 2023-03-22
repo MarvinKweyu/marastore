@@ -20,7 +20,9 @@
         {% csrf_token %}
         <input type="submit" value="{% trans "Add to cart" %}">
     </form>
-    {{ product.description|linebreaks }}
+    <article>
+        {{ product.description|linebreaks }}
+    </article>
     {% if recommended_products %}
         <div class="recommendations">
             <h3>{% trans "People who bought this also bought" %}</h3>

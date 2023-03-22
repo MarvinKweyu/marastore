@@ -19,7 +19,13 @@
       </td>
       <td>{{ order.created }}</td>
       <td>{{ order.get_total_cost }}</td>
-      <td>{{ order.paid }}</td>
+      <td>
+        {% if order.paid %}
+        <span class="badge rounded-pill bg-success">Success</span>
+        {% else %}
+        <span class="badge rounded-pill bg-warning text-dark">Incomplete</span>
+        {% endif %}
+    </td>
     </tr>
     {% endfor %}
   </tbody>
