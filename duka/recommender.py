@@ -52,7 +52,6 @@ class Recommender:
             The maximum number of recommendations to return
         """
         product_ids = [p.id for p in products]
-        print(f"\n\n\n\n Product detail: {products}")
         if len(products) == 1:
             # one product
             # get ids of products that were bought with the given product ordered by
@@ -78,7 +77,6 @@ class Recommender:
             # remove temporary key
             r.delete(tmp_key)
 
-        print(f"\n\n\n\n Suggested products: {suggestions} \n\n\n\n")
         suggested_product_ids = [int(id) for id in suggestions]
         # get prodcts and sort by order of appearence
         suggested_products = list(Product.objects.filter(id__in=suggested_product_ids))

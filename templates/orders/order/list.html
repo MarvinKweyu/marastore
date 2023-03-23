@@ -4,7 +4,7 @@
 {% if orders %}
 <table class="table table-striped">
   <thead>
-    <tr class="" style="background-color: #5993bb;">
+    <tr class="" style="background-color: #2d3753">
       <th scope="col">Order Number</th>
       <th scope="col">Date</th>
       <th scope="col">Total</th>
@@ -14,9 +14,7 @@
   <tbody>
     {% for order in orders %}
     <tr>
-      <td>
-        {{ order.id }}
-      </td>
+      <td>{{ order.id }}</td>
       <td>{{ order.created }}</td>
       <td>{{ order.get_total_cost }}</td>
       <td>
@@ -25,7 +23,7 @@
         {% else %}
         <span class="badge rounded-pill bg-warning text-dark">Incomplete</span>
         {% endif %}
-    </td>
+      </td>
     </tr>
     {% endfor %}
   </tbody>
@@ -33,4 +31,4 @@
 {% else %}
 <p>You have no orders.</p>
 {% endif %}
- {% endblock %}
+{% endblock %}

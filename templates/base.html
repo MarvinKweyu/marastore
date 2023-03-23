@@ -32,16 +32,14 @@
 
   <body>
 
-    <div class="mb-2 d-flex justify-content-between" >
-
-
-          <a class="navbar-brand px-2" href="/">The Mara Nomads store</a>
-          <div class="px-2">
+    <div class="mb-2 d-flex justify-content-between" style="background-color: #2d3753;">
+          <a class="navbar-brand px-2" href="/" style="color: white">The Mara Nomads store</a>
+          <div class="px-2 mt-2">
           <div class="cart mx-2">
              {% if not request.user.is_authenticated %}
 
                   {# URL provided by django-allauth/account/urls.py #}
-                  <a id="log-in-link" class="px-2" href="{% url 'account_login' %}">
+                  <a id="log-in-link" class="px-2" style="color: white" href="{% url 'account_login' %}">
                 {% translate "Sign In" %}
                   </a>
 
@@ -50,18 +48,18 @@
 
 
                 {# URL provided by django-allauth/account/urls.py #}
-                <a class="px-2" href="{% url 'account_logout' %}">{% translate "Sign Out" %}</a>
+                <a class="px-2" href="{% url 'account_logout' %}" style="color: white">{% translate "Sign Out" %}</a>
 
 
-              <a class="px-2" href="{% url 'orders:list_my_orders' %}" class="">My Orders</a>
+              <a class="px-2" href="{% url 'orders:list_my_orders' %}" class="" style="color: white">My Orders</a>
 
 
 
               {% endif %}
                 {% with total_items=cart|length%}
                 {% if total_items > 0 %}
-                  {% trans "Your cart" %}:
-                  <a href="{% url "cart:cart_detail" %}">
+                 <span style="color: white"> {% trans "Your cart" %}:</span>
+                  <a href="{% url "cart:cart_detail" %}" style="color: #77b6e2">
                       {% blocktrans with total=cart.get_total_price count items=total_items %}
                           {{items }} item, ${{total }}
                           {% plural %}
@@ -91,12 +89,23 @@
       {% endif %}
 
 
-      <div id="">
+      <div>
             {% block content %}
             {% endblock %}
-        </div>
+      </div>
+
+
 
     </div> <!-- /container -->
 
+    <!-- <div class="footer d-flex justify-content-between bottom-0">
+        <div class="footer-left">
+          <p>&copy; 2021 The Mara Nomads store</p>
+        </div>
+        <div class="footer-right">
+          <p>Powered by <a href="https://www.maranomads.com">Marvin Kweyu</a></p>
+        </div>
+
+    </div> -->
   </body>
 </html>
