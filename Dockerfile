@@ -16,8 +16,9 @@ RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
 RUN apk add py3-pip python3-dev pango zlib-dev jpeg-dev openjpeg-dev g++ libffi-dev
 # install dependencies
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+COPY ./requirements/base.txt .
+COPY ./requirements/local.txt .
+RUN pip install -r local.txt
 
 # copy entrypoint
 COPY ./entrypoint.sh .

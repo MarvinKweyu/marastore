@@ -1,9 +1,10 @@
-# The MaraNomads Store
+# [The Traveller's Store](https://marvinkweyu.net)
 
-The MaraNomads Shopping experience
+The Traveller's Shopping experience
 
 
-- [The MaraNomads Store](#the-maranomads-store)
+![The Traveller](./screens/marastorereview.gif)
+- [The Traveller's Store](#the-travellers-store)
   - [Core features](#core-features)
   - [Setup](#setup)
     - [Bare metal](#bare-metal)
@@ -12,16 +13,18 @@ The MaraNomads Shopping experience
     - [Docker](#docker)
 
 
+
+An article around the build process can be found on [marvinkweyu/themarastore]()
 ## Core features
 :heavy_check_mark: Viewing items in the shop
 
 :heavy_check_mark: Filtering items by category
 
-:heavy_check_mark: Adding items to the cart and viewing the cart
+:heavy_check_mark: Managing your cart
 
-:heavy_check_mark: Sending an email confirmation on order
+:heavy_check_mark: Email notifcations on order
 
-:heavy_check_mark: Complete payment of order using a credit card
+:heavy_check_mark: Credit card payment
 
 :heavy_check_mark: Generate PDF invoice on sale and send the invoice to the customer
 
@@ -38,7 +41,7 @@ Install the following dependencies **before** running the `develop` bash script.
 
 - Postgresql
 - RabbitMQ
-- Redi
+- Redis
 - Weasyprint
 
 Setup a virtual environment, install requirements , run migrations and run the server
@@ -48,7 +51,7 @@ bash develop.sh
 ```
 
 #### Running message brokers;
-Launch rabbitMQ
+Launch rabbitMQ on terminal 1
 ```bash
 sudo rabbitmq-server
 ```
@@ -56,7 +59,6 @@ On a different terminal, launch celery
 
 ```bash
 celery -A maranomadstore worker -l info
-
 ```
 
 To monitor asynchronous tasks i.e task statistics
@@ -64,6 +66,10 @@ To monitor asynchronous tasks i.e task statistics
 celery -A maranomadstore flower
 ```
 Then access the task list queue on *localhost:5555*
+
+Access the project via: **127.0.0.1:8000**
+
+---
 ### Docker
 
 **Development**
@@ -71,14 +77,6 @@ Then access the task list queue on *localhost:5555*
 With *docker* and *docker-compose* installed , clone the repo and run the following command at the root of the project.
 ```bash
 docker-compose -f local.yaml up -d --build
-
-```
-
-**Production**
-
-```bash
-docker-compose -f production.yaml up -d --build
-
 ```
 
 Access the project via: **127.0.0.1:8000**

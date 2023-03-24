@@ -1,17 +1,20 @@
 from decimal import Decimal
 
-from coupons.models import Coupon
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from duka.models import Product
+
 from accounts.models import CustomUser
+from coupons.models import Coupon
+from duka.models import Product
 
 
 class Order(models.Model):
     """Manage all orders across the system"""
 
-    user = models.ForeignKey(CustomUser, related_name="orders", on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        CustomUser, related_name="orders", on_delete=models.CASCADE
+    )
     city = models.CharField(_("city"), max_length=250)
     address = models.CharField(_("address"), max_length=250)
     postal_code = models.CharField(_("postal code"), max_length=50)

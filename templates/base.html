@@ -4,13 +4,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}maranomadsstore{% endblock title %}</title>
+    <title>{% trans "The Mara Store" %} | {% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="African literature brought home">
+    <meta name="description" content="The Traveller's Store">
     <meta name="author" content="Marvin Kweyu">
 
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
-
     {% block css %}
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -88,24 +87,11 @@
         {% endfor %}
       {% endif %}
 
-
-      <div>
-            {% block content %}
-            {% endblock %}
-      </div>
-
-
+      {% block content %}
+      {% endblock %}
 
     </div> <!-- /container -->
 
-    <!-- <div class="footer d-flex justify-content-between bottom-0">
-        <div class="footer-left">
-          <p>&copy; 2021 The Mara Nomads store</p>
-        </div>
-        <div class="footer-right">
-          <p>Powered by <a href="https://www.maranomads.com">Marvin Kweyu</a></p>
-        </div>
 
-    </div> -->
   </body>
 </html>
