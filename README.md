@@ -14,7 +14,7 @@ The Traveller's Shopping experience
 
 
 
-An article around the build process can be found on [marvinkweyu/themarastore]()
+An article around the build process can be found on [marvinkweyu/themarastore](https://marvinkweyu.net/projects)
 ## Core features
 :heavy_check_mark: Viewing items in the shop
 
