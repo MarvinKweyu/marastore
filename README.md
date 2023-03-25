@@ -41,10 +41,10 @@ An article around the build process can be found on [marvinkweyu/themarastore](h
 
 Install the following dependencies **before** running the `develop` bash script.
 
-- Postgresql
-- RabbitMQ
-- Redis
-- Weasyprint
+- [Postgresql](https://www.postgresql.org/download/)
+- [RabbitMQ](https://www.rabbitmq.com/download.html)
+- [Redis](https://redis.io/)
+- [Weasyprint](https://weasyprint.org/)
 
 Setup a virtual environment, install requirements , run migrations and run the server
 
@@ -74,7 +74,18 @@ Access the project via: **127.0.0.1:8000**
 
 ### Setting up Braintree environment variables
 
-This solution uses [Braintree](https://www.braintreepayments.com/) for payment. Create your account on the [developer](sandbox.braintreegateway.com) portal and get the sandbox keys. Once done, modify the `base.py` settings file in the config folder
+This solution uses [Braintree](https://www.braintreepayments.com/) for payment. Create your account on the [developer](https://sandbox.braintreegateway.com) portal and get the sandbox keys. Once done, modify the `base.py` settings file in the config folder.
+
+```python
+# PAYMENTS
+BRAINTREE_CONF = braintree.Configuration(
+    environment=braintree.Environment.Sandbox,
+    merchant_id=env("BRAINTREE_MERCHANT_ID"),
+    public_key=env("BRAINTREE_PUBLIC_KEY"),
+    private_key=env("BRAINTREE_PRIVATE_KEY"),
+)
+
+```
 
 
 
