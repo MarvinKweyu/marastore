@@ -7,10 +7,10 @@ The Traveller's Shopping experience
 - [The Traveller's Store](#the-travellers-store)
   - [Core features](#core-features)
   - [Setup](#setup)
+    - [Setting up a Braintree account](#setting-up-a-braintree-account)
     - [Bare metal](#bare-metal)
       - [Base requirements](#base-requirements)
       - [Running message brokers;](#running-message-brokers)
-    - [Setting up Braintree environment variables](#setting-up-braintree-environment-variables)
     - [Sample credit card details to test with:](#sample-credit-card-details-to-test-with)
     - [Docker](#docker)
 
@@ -35,6 +35,21 @@ An article around the build process can be found on [marvinkweyu/themarastore](h
 
 ## Setup
 ---
+
+### Setting up a Braintree account
+
+This solution uses [Braintree](https://www.braintreepayments.com/) for payment. Create your account on the [developer](https://sandbox.braintreegateway.com) portal and get the sandbox keys. Once done, modify the `base.py` settings file in the config folder.
+
+```python
+# PAYMENTS
+BRAINTREE_CONF = braintree.Configuration(
+    environment=braintree.Environment.Sandbox,
+    merchant_id=env("BRAINTREE_MERCHANT_ID"),
+    public_key=env("BRAINTREE_PUBLIC_KEY"),
+    private_key=env("BRAINTREE_PRIVATE_KEY"),
+)
+
+```
 
 ### Bare metal
 #### Base requirements
@@ -70,22 +85,6 @@ celery -A maranomadstore flower
 Then access the task list queue on *localhost:5555*
 
 Access the project via: **127.0.0.1:8000**
-
-
-### Setting up Braintree environment variables
-
-This solution uses [Braintree](https://www.braintreepayments.com/) for payment. Create your account on the [developer](https://sandbox.braintreegateway.com) portal and get the sandbox keys. Once done, modify the `base.py` settings file in the config folder.
-
-```python
-# PAYMENTS
-BRAINTREE_CONF = braintree.Configuration(
-    environment=braintree.Environment.Sandbox,
-    merchant_id=env("BRAINTREE_MERCHANT_ID"),
-    public_key=env("BRAINTREE_PUBLIC_KEY"),
-    private_key=env("BRAINTREE_PRIVATE_KEY"),
-)
-
-```
 
 
 
