@@ -1,4 +1,4 @@
-# [The Traveller's Store](https://marvinkweyu.net)
+# [The Traveller's Store](https://www.marvinkweyu.net/projects/the_travellers_store)
 
 The Traveller's Shopping experience
 
@@ -14,7 +14,7 @@ The Traveller's Shopping experience
 
 
 
-An article around the build process can be found on [marvinkweyu/themarastore](https://marvinkweyu.net/projects)
+An article around the build process can be found on [marvinkweyu/themarastore](https://www.marvinkweyu.net/projects/the_travellers_store)
 ## Core features
 :heavy_check_mark: Viewing items in the shop
 
