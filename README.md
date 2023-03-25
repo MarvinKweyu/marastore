@@ -10,6 +10,8 @@ The Traveller's Shopping experience
     - [Bare metal](#bare-metal)
       - [Base requirements](#base-requirements)
       - [Running message brokers;](#running-message-brokers)
+    - [Setting up Braintree environment variables](#setting-up-braintree-environment-variables)
+    - [Sample credit card details to test with:](#sample-credit-card-details-to-test-with)
     - [Docker](#docker)
 
 
@@ -68,6 +70,27 @@ celery -A maranomadstore flower
 Then access the task list queue on *localhost:5555*
 
 Access the project via: **127.0.0.1:8000**
+
+
+### Setting up Braintree environment variables
+
+This solution uses [Braintree](https://www.braintreepayments.com/) for payment. Create your account on the [developer](sandbox.braintreegateway.com) portal and get the sandbox keys. Once done, modify the `base.py` settings file in the config folder
+
+
+
+### Sample credit card details to test with:
+
+*Credit card numbers*
+- 4111111111111111
+- 4005519200000004
+- 4012000033330026
+
+*Sample CVC* - 123
+
+Key in any data in the future as the expiration date
+
+**Example:**
+12/2030
 
 ---
 ### Docker
