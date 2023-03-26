@@ -11,9 +11,8 @@ The Traveller's Shopping experience
     - [Bare metal](#bare-metal)
       - [Base requirements](#base-requirements)
       - [Running message brokers;](#running-message-brokers)
-    - [Your credentials:](#your-credentials)
-    - [Sample credit card details to test with:](#sample-credit-card-details-to-test-with)
-    - [Docker](#docker)
+    - [Your credentials](#your-credentials)
+    - [Sample credit card details to test with](#sample-credit-card-details-to-test-with)
 
 
 
@@ -83,7 +82,7 @@ source .venv/bin/activate
 
 pip3 install -r requirements/local.txt
 python3 manage.py migrate
-python3 manage.py loaddata marastoredata.json
+python3 manage.py loaddata marastoredata.json # optional
 python3 manage.py runserver
 ```
 
@@ -105,7 +104,7 @@ celery -A maranomadstore flower
 Then access the task list queue on *localhost:5555*
 
 
-### Your credentials:
+### Your credentials
 
 ```
 Email: hello@marvinkweyu.net
@@ -115,7 +114,7 @@ Access the project via: **[127.0.0.1:8000](127.0.0.1:8000)**
 
 
 
-### Sample credit card details to test with:
+### Sample credit card details to test with
 
 *Credit card numbers*
 - 4111111111111111
@@ -130,13 +129,3 @@ Key in any data in the future as the expiration date
 12/2030
 
 ---
-### Docker
-
-**Development**
-
-With *docker* and *docker-compose* installed , clone the repo and run the following command at the root of the project.
-```bash
-docker-compose -f local.yaml up -d --build
-```
-
-Access the project via: **[127.0.0.1:8000](127.0.0.1:8000)**
