@@ -14,6 +14,10 @@ RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
 
 # weasyprint
 RUN apk add py3-pip python3-dev pango zlib-dev jpeg-dev openjpeg-dev g++ libffi-dev
+
+RUN apk --update --upgrade --no-cache add fontconfig ttf-freefont font-noto terminus-font \
+    && fc-cache -f \
+    && fc-list | sort
 # install dependencies
 RUN pip install --upgrade pip
 COPY ./requirements/base.txt .

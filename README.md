@@ -11,6 +11,7 @@ The Traveller's Shopping experience
     - [Bare metal](#bare-metal)
       - [Base requirements](#base-requirements)
       - [Running message brokers;](#running-message-brokers)
+    - [Your credentials:](#your-credentials)
     - [Sample credit card details to test with:](#sample-credit-card-details-to-test-with)
     - [Docker](#docker)
 
@@ -38,7 +39,11 @@ An article around the build process can be found on [marvinkweyu/themarastore](h
 
 ### Setting up a Braintree account
 
-This solution uses [Braintree](https://www.braintreepayments.com/) for payment. Create your account on the [developer](https://sandbox.braintreegateway.com) portal and get the sandbox keys. Once done, modify the `base.py` settings file in the config folder.
+This solution uses [Braintree](https://www.braintreepayments.com/) for payment. Create your account on the [developer](https://sandbox.braintreegateway.com) portal and get the sandbox keys.
+
+Once done, copy `maranomadstore/config/.env.example` to `maranomadstore/config/.env.example` making sure to fill your keys where necessary.
+
+As an overview the `base.py` settings file in the config folder.
 
 ```python
 # PAYMENTS
@@ -54,37 +59,59 @@ BRAINTREE_CONF = braintree.Configuration(
 ### Bare metal
 #### Base requirements
 
-Install the following dependencies **before** running the `develop` bash script.
+Install the following dependencies **before** running the migrations.
 
 - [Postgresql](https://www.postgresql.org/download/)
 - [RabbitMQ](https://www.rabbitmq.com/download.html)
 - [Redis](https://redis.io/)
 - [Weasyprint](https://weasyprint.org/)
 
-Setup a virtual environment, install requirements , run migrations and run the server
+
+Create a database matching what is in your environment file as specified before.
+
+Example:
+```
+Database name: marastore
+Database user: marastore
+Database password: marastore
+```
+Setup a virtual environment, install requirements , run migrations, load sample data and run the server
 
 ```bash
-bash develop.sh
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip3 install -r requirements/local.txt
+python3 manage.py migrate
+python3 manage.py loaddata marastoredata.json
+python3 manage.py runserver
 ```
 
 #### Running message brokers;
-Launch rabbitMQ on terminal 1
+Launch rabbitMQ on *terminal(2)*
 ```bash
 sudo rabbitmq-server
 ```
-On a different terminal, launch celery
+On a different *terminal(3)*, launch celery
 
 ```bash
 celery -A maranomadstore worker -l info
 ```
 
-To monitor asynchronous tasks i.e task statistics
+To monitor asynchronous tasks i.e task statistics - *terminal(4)*
 ```bash
 celery -A maranomadstore flower
 ```
 Then access the task list queue on *localhost:5555*
 
-Access the project via: **127.0.0.1:8000**
+
+### Your credentials:
+
+```
+Email: hello@marvinkweyu.net
+Password: marvin
+```
+Access the project via: **[127.0.0.1:8000](127.0.0.1:8000)**
 
 
 
@@ -112,4 +139,4 @@ With *docker* and *docker-compose* installed , clone the repo and run the follow
 docker-compose -f local.yaml up -d --build
 ```
 
-Access the project via: **127.0.0.1:8000**
+Access the project via: **[127.0.0.1:8000](127.0.0.1:8000)**

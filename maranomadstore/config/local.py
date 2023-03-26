@@ -1,3 +1,5 @@
+import os
+
 from .base import *  # noqa
 from .base import env
 
@@ -26,9 +28,9 @@ CACHES = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "marastore",
-        "USER": "marvin",
-        "PASSWORD": "",
+        "NAME": os.getenv("SQL_DATABASE", "marastore"),
+        "USER": os.getenv("SQL_USER", "marvin"),
+        "PASSWORD": os.getenv("SQL_PASSWORD", ""),
     }
 }
 

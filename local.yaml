@@ -6,22 +6,28 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=maranomadstore
-      - POSTGRES_PASSWORD=maranomadstore
-      - POSTGRES_DB=maranomadstore_dev
+      - POSTGRES_DB=marastore
+      - POSTGRES_USER=marastore
+      - POSTGRES_PASSWORD=marastore
   rabbit:
-    hostname: rabbit
+    hostname: localhost
     image: rabbitmq:3.6.9
     container_name: maranomadstore_local_rabbitmq
     environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=mypass
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+      - RABBITMQ_DEFAULT_VHOST=/
+      # - CELERY_BROKER_URL=amqp://user:password@rabbit:5672
+      - CELERY_BROKER_URLamqp://guest:**@127.0.0.1:5672//
     ports:
       - "5672:5672"
       - "15672:15672"
+    expose:
+      - "5672"
   redis:
     image: redis:6
     container_name: maranomadstore_local_redis
+
   web: &web
     build: .
     image: maranomadstore_local_web
@@ -42,6 +48,8 @@ services:
       - db
       - redis
       - rabbit
+    restart: "on-failure"
+
   celeryworker:
     <<: *web
     image: maranomadstore_local_celeryworker
@@ -50,17 +58,7 @@ services:
       - redis
       - db
     ports: []
-    command: /start-celeryworker
-
-  celerybeat:
-    <<: *web
-    image: maranomadstore_local_celerybeat
-    container_name: maranomadstore_local_celerybeat
-    depends_on:
-      - redis
-      - db
-    ports: []
-    command: /start-celerybeat
+    command: celery -A maranomadstore worker -l info
 
   flower:
     <<: *web
@@ -68,7 +66,7 @@ services:
     container_name: maranomadstore_local_flower
     ports:
       - "5555:5555"
-    command: /start-flower
+    command: celery -A maranomadstore flower
 
 # persist data beyond life of container
 volumes:

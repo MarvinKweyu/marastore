@@ -1,0 +1,1689 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-03-21T21:18:05.360Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "Shelter",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-03-21T21:18:09.616Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "Clothing",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-03-21T21:18:46.187Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "1",
+        "object_repr": "Hiking shoes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-03-21T21:19:51.986Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "2",
+        "object_repr": "Waterproof tent",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-03-22T20:26:35.273Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "3",
+        "object_repr": "Rain coat",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-03-22T20:27:55.567Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "Tools",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-03-22T20:28:20.305Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "4",
+        "object_repr": "Pen Knife",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-03-23T20:03:48.358Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "Order 8",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"order item\", \"object\": \"OrderItem object (16)\"}}, {\"added\": {\"name\": \"order item\", \"object\": \"OrderItem object (17)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-03-23T20:04:10.382Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "13",
+        "object_repr": "Order 13",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"order item\", \"object\": \"OrderItem object (18)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-03-23T20:07:12.595Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "17",
+        "object_repr": "Order 17",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-03-23T20:07:12.597Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "16",
+        "object_repr": "Order 16",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-03-23T20:07:12.598Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "15",
+        "object_repr": "Order 15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-03-23T20:07:12.599Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "14",
+        "object_repr": "Order 14",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-03-24T20:00:41.164Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "marvin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-03-24T20:01:05.707Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "marvin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name of User\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add site",
+        "content_type": 6,
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change site",
+        "content_type": 6,
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete site",
+        "content_type": 6,
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view site",
+        "content_type": 6,
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add email address",
+        "content_type": 7,
+        "codename": "add_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change email address",
+        "content_type": 7,
+        "codename": "change_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete email address",
+        "content_type": 7,
+        "codename": "delete_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view email address",
+        "content_type": 7,
+        "codename": "view_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add email confirmation",
+        "content_type": 8,
+        "codename": "add_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change email confirmation",
+        "content_type": 8,
+        "codename": "change_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete email confirmation",
+        "content_type": 8,
+        "codename": "delete_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view email confirmation",
+        "content_type": 8,
+        "codename": "view_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add social account",
+        "content_type": 9,
+        "codename": "add_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change social account",
+        "content_type": 9,
+        "codename": "change_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete social account",
+        "content_type": 9,
+        "codename": "delete_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view social account",
+        "content_type": 9,
+        "codename": "view_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add social application",
+        "content_type": 10,
+        "codename": "add_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change social application",
+        "content_type": 10,
+        "codename": "change_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete social application",
+        "content_type": 10,
+        "codename": "delete_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view social application",
+        "content_type": 10,
+        "codename": "view_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add social application token",
+        "content_type": 11,
+        "codename": "add_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change social application token",
+        "content_type": 11,
+        "codename": "change_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete social application token",
+        "content_type": 11,
+        "codename": "delete_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view social application token",
+        "content_type": 11,
+        "codename": "view_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 12,
+        "codename": "add_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 12,
+        "codename": "change_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 12,
+        "codename": "delete_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 12,
+        "codename": "view_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add profile",
+        "content_type": 13,
+        "codename": "add_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change profile",
+        "content_type": 13,
+        "codename": "change_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete profile",
+        "content_type": 13,
+        "codename": "delete_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view profile",
+        "content_type": 13,
+        "codename": "view_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add category",
+        "content_type": 14,
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change category",
+        "content_type": 14,
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete category",
+        "content_type": 14,
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view category",
+        "content_type": 14,
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add product",
+        "content_type": 15,
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change product",
+        "content_type": 15,
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete product",
+        "content_type": 15,
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view product",
+        "content_type": 15,
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add order",
+        "content_type": 16,
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change order",
+        "content_type": 16,
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete order",
+        "content_type": 16,
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view order",
+        "content_type": 16,
+        "codename": "view_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add order item",
+        "content_type": 17,
+        "codename": "add_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change order item",
+        "content_type": 17,
+        "codename": "change_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete order item",
+        "content_type": 17,
+        "codename": "delete_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view order item",
+        "content_type": 17,
+        "codename": "view_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add coupon",
+        "content_type": 18,
+        "codename": "add_coupon"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change coupon",
+        "content_type": 18,
+        "codename": "change_coupon"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete coupon",
+        "content_type": 18,
+        "codename": "delete_coupon"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view coupon",
+        "content_type": 18,
+        "codename": "view_coupon"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sites",
+        "model": "site"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "account",
+        "model": "emailaddress"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "account",
+        "model": "emailconfirmation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialaccount"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialapp"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "accounts",
+        "model": "customuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "accounts",
+        "model": "profile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "duka",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "duka",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "orders",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "orders",
+        "model": "orderitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "coupons",
+        "model": "coupon"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1ojbq8j3242irfhx6w7v8z22680didxi",
+    "fields": {
+        "session_data": ".eJxVj80KgzAQhN8lZ5Fmmz-9tS8SNskGQ0WLidAivntj8dAeZ2b3G2ZjFtcy2DXTYlNgPeOs-fUc-gdNR4DjeNgtej-vU2m_N2ec21tVNJXksaR5up9ff6gB81A5V66VcTEEYRRpDhEIhdTQGQXArxHBO0FaKCM78lE77kCSk9xEQZLDAc2Uc62x9Hqm5c36S8PmJZwToCqPS2H9tu8fSsxK0g:1pfnTJ:uRPlnSN_6gQhfu640vSOt2VvoORaFgxffG8buQvdxhI",
+        "expire_date": "2023-04-07T19:53:09.589Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "djacaf9znu3h4mzxg52m2nxk6aziz4c3",
+    "fields": {
+        "session_data": ".eJxVj8sKgzAQRf8la5Fmmpfu2h8Jk2SCoRKLidAi_nu1uGiX9zFnuCuzuNTBLoVmmwLrGWfNr-fQPygfAY7jYbfo_bTk2n47Z1za264o1-Sxpinfz6s_1IBl2DlXrpVxMQRhFGkOEQiF1NAZBcCvEcE7QVooIzvyUTvuQJKT3ERBksMBLVTK_sbS65nmN-svDZvmcE4A3jCPc2X9um0fSthK0w:1pfnsa:1Loq2Gm1NH2n0rHParY5Oz0vAoQxG_pmQu_QWNV_fvs",
+        "expire_date": "2023-04-07T20:19:16.387Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "gmda29gek57t5rrheebb48od3zel06ec",
+    "fields": {
+        "session_data": ".eJxVjcsKgzAQRf8l6yLNmJfu2h8JkzjBUInFJNAi_nu1uHF5X-euzONSWL9uN2axltHWTIuNA-sZZxfPoX9ROgKcpsNu0Pu5ptL8O2ecm8euKJXoscQ5Pc_VBTViHndOy7UyLgyDMIo0hwCEQmrojALgbUDwTpAWysiOfNCOO5DkJDdBkORwQDPlvN9Y-rzj8mX9ffsBTm5Gfg:1pfnTx:fwmUmRZuwfmAgrlxgVfr1tQNcHt0LdGKMy96wNWlUaI",
+        "expire_date": "2023-04-07T19:53:49.872Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "h3j6ky5y4f5f90s1xffdqg7j1vus9saz",
+    "fields": {
+        "session_data": "eyJjYXJ0Ijp7fX0:1pfMPq:yHD1KU3Yrsd_ZI-frkVA9_tt_VL-C5jbDIpCPc-RkZA",
+        "expire_date": "2023-04-06T14:59:46.073Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "i77gre6l3e5u1kuv2dnt3y5xvwfzz017",
+    "fields": {
+        "session_data": "eyJjYXJ0Ijp7fX0:1pfnIi:flKi8Jj23DG_1cLQntEmVrqUZRFVsy0HDJ8hiXBpRJw",
+        "expire_date": "2023-04-07T19:42:12.858Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lgyll1w8r43djdqa6fassm6mx7zsftol",
+    "fields": {
+        "session_data": ".eJxVj9EKwjAMRf8lzzKa2K51b_ojI-1SVpSpawfK2L_biS--BHJPci93hcBzgW4F3Mdz4amk8oYOD_CYUxDogJRqlIJtO0DPSxn7Jcvcp6EihD_Nc7jKtAO-3Xa54RDuy1Sa780P5-ZcN6lBgUu6T5ff15_VyHmsPke0rfNxGLRrxSJFEtbG0sm1RHiMTMFrsbp15iQhWo-ejHiDLmoxSLtplpxrTC-vR5prNbV9AFRYUHQ:1pezol:RKZ6Ix6Pcpetq0OnTgmPcOQoGstb9rHyVoaU_GUBDZM",
+        "expire_date": "2023-04-05T14:51:59.514Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "nl6445h3pieqxo768a1ra1hx3zpx12ds",
+    "fields": {
+        "session_data": ".eJxVjDsOgzAQRO-yNbLsxcaGMn3OgPxZBycRJMYUEeLuAYmGZop5b2YFb3OBbgVxxHexY0nlBx1W8MnJE3SAnDPOYdsq6O1Shn6ZKfcp7EjApXPWv2g8QHja8TExP40lJ8cOhZ10Zvcp0Pt2upeDwc7Dvq6FboyLIUjTkBYYkaxUGlvTIIo6WvROkpaNUS35qJ1wqMgpYaIkJRC2P_XHRMQ:1pfSDa:RiNxB5rAA5TvBlc5x8Zh1IXbSQfPEpSLmS3xTvc1U1Y",
+        "expire_date": "2023-04-06T21:11:30.445Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "prc35vj8vqan6b6hugbhno12jm544xo2",
+    "fields": {
+        "session_data": "eyJjYXJ0Ijp7fX0:1pfn3B:i_fPp4Lk_aBnqgRSjRTfFbX1WEFr6-v-F8y7-CGEwQQ",
+        "expire_date": "2023-04-07T19:26:09.731Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qjw3ak6rbvgvqeqval8cx45513sowb39",
+    "fields": {
+        "session_data": ".eJxVjDsOg0AMBe_iOlrJZn9Qps8ZkL3rDSQRSHwqxN0JEg3tm5m3QeJpgWbbH9DyunTtOuvU9hkaQLhtwumrwwnyh4f3aNI4LFMv5lTMRWfzGrP-npd7O-h47v51hcFHKTnb6DUgFVK2LlAdPRFWhSmJ1WB9dLWmEgSFnIrDWKw6JNgPGhA6zQ:1pfnor:svY0Vjl06qBlO3pNoWq7rSN1X0bSParddUlHk_i7Pp8",
+        "expire_date": "2023-04-07T20:15:25.018Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rwu6hdz2crzevtfud5cu3jmk7co9t257",
+    "fields": {
+        "session_data": "eyJjYXJ0Ijp7fX0:1pfnUB:oINv45Afinoutrurv7dp3hEtlhR3Gaz3QRRSGvpvYOw",
+        "expire_date": "2023-04-07T19:54:03.579Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "sj4jibquicyce4dmli20k9n1lb43bu4d",
+    "fields": {
+        "session_data": "eyJjYXJ0Ijp7IjEiOnsicXVhbnRpdHkiOjEsInByaWNlIjoiMjAwLjAwIn19fQ:1pf0CH:xIJusNVe5LDC1rFSVGeuj3CxKPQNW2tVo3FP9PAKqM4",
+        "expire_date": "2023-04-05T15:16:17.572Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wi75x9mssmffno7c8bjyvhykuinpk7qa",
+    "fields": {
+        "session_data": ".eJxVjDsOg0AMBe_iOlrJZn9Qps8ZkL3rDSQRSHwqxN0JEg3tm5m3QeJpgWbbH9DyunTtOuvU9hkaQLhtwumrwwnyh4f3aNI4LFMv5lTMRWfzGrP-npd7O-h47v51hcFHKTnb6DUgFVK2LlAdPRFWhSmJ1WB9dLWmEgSFnIrDWKw6JNgPGhA6zQ:1pfQm9:EHozxN_L6adm-MPSZfjPu6xZhVvgrPHj-QyR4gac95s",
+        "expire_date": "2023-04-06T19:39:05.731Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wzn3epvalkrnqqkbp0qkv6w41cm4q80q",
+    "fields": {
+        "session_data": ".eJxVjDsOgzAQRO-yNbKw8S-U6XMGtLbXwUkEiTFFhLh7YomGZop5b2YDj7lAv0FX47PiVFL5Qs8beOfkCXrgqmVtC_vewIBrGYd1oTykUBGcOof-SVMF4YHTfWZ-nkpOjlWFHXRhtznQ63q4p4MRl_G_7rjR1sUQpNVkuIiCUCojLlYLwbuIwjtJRmqrLuSjcdwJRU5xGyUpLmD_AflvRMk:1pfMkO:uvEm7FKELWRw62DmpZlPMqPKG7aGjkk0uevNVYcJm4I",
+        "expire_date": "2023-04-06T15:21:00.970Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x18zdn9jvk809tl1hexgrcgfx3g33w2w",
+    "fields": {
+        "session_data": ".eJxVj8sKgzAQRf8la5Fmmpfu2h8Jk2SCoRKLidAi_nu1uGiX9zFnuCuzuNTBLoVmmwLrGWfNr-fQPygfAY7jYbfo_bTk2n47Z1za264o1-Sxpinfz6s_1IBl2DlXrpVxMQRhFGkOEQiF1NAZBcCvEcE7QVooIzvyUTvuQJKT3ERBksMBLVTK_sbS65nmN-svDZvmcE7gXcM8zpX167Z9AEsrSto:1pfSML:J2NtLhxtOkrvcM5xXOXFzHgiIfWmAd7ZMfh3Koe9bq4",
+        "expire_date": "2023-04-06T21:20:33.677Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "xi5lpt2i84bj34xkgbrjg98oqbsqst42",
+    "fields": {
+        "session_data": ".eJxVj8sKgzAQRf8la5Fmmpfu2h8Jk2SCoRKLidAi_nu1uGiX9zFnuCuzuNTBLoVmmwLrGWfNr-fQPygfAY7jYbfo_bTk2n47Z1za264o1-Sxpinfz6s_1IBl2DlXrpVxMQRhFGkOEQiF1NAZBcCvEcE7QVooIzvyUTvuQJKT3ERBksMBLVTK_sbS65nmN-svDZvmcE4AaJjHubJ-3bYPSuRK1A:1pfnk3:PkYcUwdeHtE2vNgpKe9ju8OKexxnR1KafSNlyNvOWdo",
+        "expire_date": "2023-04-07T20:10:27.561Z"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$qtp4hMRctics9RIvgAWvYw$A28uSm0OLN4hWKQbNXp4YdndL++EyYoFuyyFut25gNU=",
+        "last_login": "2023-03-24T20:10:10.171Z",
+        "is_superuser": true,
+        "username": "marvin",
+        "email": "hello@marvinkweyu.net",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-03-21T21:17:16Z",
+        "name": "Marvin Kweyu",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "gender": "P",
+        "date_of_birth": null
+    }
+},
+{
+    "model": "duka.category",
+    "pk": 1,
+    "fields": {
+        "name": "Shelter",
+        "slug": "shelter"
+    }
+},
+{
+    "model": "duka.category",
+    "pk": 2,
+    "fields": {
+        "name": "Clothing",
+        "slug": "clothing"
+    }
+},
+{
+    "model": "duka.category",
+    "pk": 3,
+    "fields": {
+        "name": "Tools",
+        "slug": "tools"
+    }
+},
+{
+    "model": "duka.product",
+    "pk": 1,
+    "fields": {
+        "category": 2,
+        "name": "Hiking shoes",
+        "slug": "hiking-shoes",
+        "image": "",
+        "description": "",
+        "price": "200.00",
+        "available": true,
+        "created": "2023-03-21T21:18:46.186Z",
+        "updated": "2023-03-21T21:18:46.186Z"
+    }
+},
+{
+    "model": "duka.product",
+    "pk": 2,
+    "fields": {
+        "category": 1,
+        "name": "Waterproof tent",
+        "slug": "waterproof-tent",
+        "image": "",
+        "description": "",
+        "price": "500.00",
+        "available": true,
+        "created": "2023-03-21T21:19:51.984Z",
+        "updated": "2023-03-21T21:19:51.984Z"
+    }
+},
+{
+    "model": "duka.product",
+    "pk": 3,
+    "fields": {
+        "category": 2,
+        "name": "Rain coat",
+        "slug": "rain-coat",
+        "image": "products/2023/03/22/raincoat.jpg",
+        "description": "",
+        "price": "150.00",
+        "available": true,
+        "created": "2023-03-22T20:26:35.273Z",
+        "updated": "2023-03-22T20:26:35.273Z"
+    }
+},
+{
+    "model": "duka.product",
+    "pk": 4,
+    "fields": {
+        "category": 3,
+        "name": "Pen Knife",
+        "slug": "pen-knife",
+        "image": "products/2023/03/22/pen-knife.jpg",
+        "description": "",
+        "price": "50.00",
+        "available": true,
+        "created": "2023-03-22T20:28:20.304Z",
+        "updated": "2023-03-22T20:28:20.304Z"
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "city": "Voluptatibus voluptatibus ex incidunt eiusmod consequatur asperiores reprehenderit ut enim duis non tempore",
+        "address": "Quod sit sit est quis ullamco quia aperiam vero illo magna dolor debitis",
+        "postal_code": "Et vel veniam in officia consequatur aliquip",
+        "description": "Hic sit aliqua In",
+        "created": "2023-03-22T15:20:08.056Z",
+        "updated": "2023-03-22T15:20:08.056Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 4,
+    "fields": {
+        "user": 1,
+        "city": "Dicta sunt sunt culpa et voluptate amet dignissimos minima ut ut rerum non excepturi minima autem",
+        "address": "Pariatur Illo culpa deserunt sint et quia ex reprehenderit dolor est aut",
+        "postal_code": "Sint quis voluptates atque numquam sint",
+        "description": "Autem quibusdam dolo",
+        "created": "2023-03-22T15:59:15.305Z",
+        "updated": "2023-03-22T15:59:15.305Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 5,
+    "fields": {
+        "user": 1,
+        "city": "Eaque in natus reprehenderit quo",
+        "address": "Id amet labore eos et ea occaecat in et duis culpa dolor id quaerat mollit",
+        "postal_code": "Amet quaerat harum dicta corrupti beatae ut",
+        "description": "Aliquam perspiciatis",
+        "created": "2023-03-22T15:59:51.530Z",
+        "updated": "2023-03-22T15:59:51.530Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 6,
+    "fields": {
+        "user": 1,
+        "city": "Aliquid et aut sed ut enim ea assumenda repudiandae earum est dolores aut quibusdam doloribus cumque aspernatur",
+        "address": "Nisi ratione illum aliquip non occaecat vero Nam necessitatibus",
+        "postal_code": "Et alias blanditiis omnis odit error laborum Unde",
+        "description": "Porro est ut est i",
+        "created": "2023-03-22T17:25:14.073Z",
+        "updated": "2023-03-22T17:33:55.488Z",
+        "paid": true,
+        "braintree_id": "8j20jx41",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 7,
+    "fields": {
+        "user": 1,
+        "city": "In corrupti velit qui et ullam pariatur Quis laboriosam laboris",
+        "address": "Non rem rerum quaerat do iusto consequat Voluptates quo quibusdam distinctio Non obcaecati ea libero cillum rerum aut duis animi",
+        "postal_code": "Similique et autem adipisicing sed labore sed",
+        "description": "Dolore ratione dolor",
+        "created": "2023-03-22T17:36:36.348Z",
+        "updated": "2023-03-22T17:37:11.831Z",
+        "paid": true,
+        "braintree_id": "25g1hc3r",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 8,
+    "fields": {
+        "user": 1,
+        "city": "Facere qui tempore sunt dolores expedita occaecat odio labore obcaecati voluptatem sed deleniti eu consectetur perspiciatis dolor in tempora eius",
+        "address": "Quos omnis excepteur impedit Nam sit quos proident velit ut do",
+        "postal_code": "Consectetur porro laborum Repellendus Doloribus",
+        "description": "Ut porro dolore iure",
+        "created": "2023-03-22T17:39:08.408Z",
+        "updated": "2023-03-23T20:03:48.355Z",
+        "paid": true,
+        "braintree_id": "qfa75c3k",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 9,
+    "fields": {
+        "user": 1,
+        "city": "Aliquid mollit quis corrupti eiusmod cum quos itaque impedit dolor ut quasi veniam sit obcaecati",
+        "address": "Sunt id ratione qui molestiae sunt iusto quae tempora",
+        "postal_code": "Ea autem neque quis ullamco est sunt est animi",
+        "description": "Facilis quaerat face",
+        "created": "2023-03-22T19:59:19.597Z",
+        "updated": "2023-03-22T20:00:01.425Z",
+        "paid": true,
+        "braintree_id": "ct1twd4f",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 10,
+    "fields": {
+        "user": 1,
+        "city": "Laborum Voluptatem id nemo quae ipsam voluptatem quo",
+        "address": "Sint exercitationem eaque saepe commodi dolore vero et aliquid ut id occaecat omnis sunt cumque et",
+        "postal_code": "Eu rerum sed autem at officiis corporis magnam cil",
+        "description": "Omnis in quae omnis",
+        "created": "2023-03-22T20:53:45.473Z",
+        "updated": "2023-03-22T20:57:41.359Z",
+        "paid": true,
+        "braintree_id": "j5hmd27c",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 11,
+    "fields": {
+        "user": 1,
+        "city": "Est eum totam est odit deserunt saepe ab et quia alias",
+        "address": "Illo consectetur in perspiciatis dolor fugit excepteur ex excepteur tempore sunt architecto laborum sit",
+        "postal_code": "Lorem adipisicing dolorum animi enim omnis et",
+        "description": "Sint voluptas sit m",
+        "created": "2023-03-22T20:59:53.149Z",
+        "updated": "2023-03-22T20:59:53.149Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 12,
+    "fields": {
+        "user": 1,
+        "city": "Facilis exercitationem consequatur Dolore amet in qui itaque non non enim animi at minima placeat et",
+        "address": "Officiis eius consequatur magnam voluptatibus excepteur nihil",
+        "postal_code": "Nulla molestiae nihil est sed omnis ex facere",
+        "description": "Cum molestiae possim",
+        "created": "2023-03-22T21:07:36.484Z",
+        "updated": "2023-03-22T21:08:00.440Z",
+        "paid": true,
+        "braintree_id": "arqc5k2y",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 13,
+    "fields": {
+        "user": 1,
+        "city": "Culpa laboriosam ut omnis rerum veniam qui occaecat mollit non labore placeat et in aperiam pariatur",
+        "address": "Autem in culpa ut pariatur Quo vel fugiat aut molestiae",
+        "postal_code": "Officia sunt est incididunt consequatur aliquid",
+        "description": "Delectus iste dicta",
+        "created": "2023-03-22T21:16:04.312Z",
+        "updated": "2023-03-23T20:04:10.381Z",
+        "paid": true,
+        "braintree_id": "pr5eza2h",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 18,
+    "fields": {
+        "user": 1,
+        "city": "Pariatur Sed adipisci cupidatat in non est minus",
+        "address": "Officiis inventore non a debitis non",
+        "postal_code": "Voluptatem maiores aut aute deleniti nemo reprehe",
+        "description": "Iure ipsa consequat",
+        "created": "2023-03-23T20:11:36.857Z",
+        "updated": "2023-03-23T20:12:49.801Z",
+        "paid": true,
+        "braintree_id": "36dxv1y2",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 19,
+    "fields": {
+        "user": 1,
+        "city": "Nam dolor Nam eiusmod atque facilis dolore temporibus unde aspernatur inventore expedita mollit ut eum dolorem",
+        "address": "Aut nulla asperiores libero voluptate sunt delectus rerum obcaecati ullam eius corrupti est cillum a voluptas",
+        "postal_code": "Voluptatem facilis nisi natus officia molestiae of",
+        "description": "Fugiat nihil tempora",
+        "created": "2023-03-23T20:15:07.645Z",
+        "updated": "2023-03-23T20:15:07.645Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 20,
+    "fields": {
+        "user": 1,
+        "city": "Amet quod voluptatem Animi voluptate ipsa tempore ut mollitia dolor id ut sed sint quod mollitia exercitation",
+        "address": "Nulla a elit inventore magnam repudiandae dolor asperiores eius cupiditate et rerum",
+        "postal_code": "Blanditiis repudiandae recusandae Consequat Quae",
+        "description": "Quaerat architecto i",
+        "created": "2023-03-24T19:50:17.005Z",
+        "updated": "2023-03-24T19:50:17.005Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 21,
+    "fields": {
+        "user": 1,
+        "city": "Earth",
+        "address": "Eden",
+        "postal_code": "0111",
+        "description": "Near the mall",
+        "created": "2023-03-24T20:06:19.750Z",
+        "updated": "2023-03-24T20:06:19.750Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 22,
+    "fields": {
+        "user": 1,
+        "city": "Earth",
+        "address": "Eden",
+        "postal_code": "1000",
+        "description": "Near you",
+        "created": "2023-03-24T20:10:26.303Z",
+        "updated": "2023-03-24T20:10:26.303Z",
+        "paid": false,
+        "braintree_id": "",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 1,
+    "fields": {
+        "order": 3,
+        "product": 1,
+        "price": "200.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 2,
+    "fields": {
+        "order": 4,
+        "product": 1,
+        "price": "200.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 3,
+    "fields": {
+        "order": 5,
+        "product": 1,
+        "price": "200.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 4,
+    "fields": {
+        "order": 6,
+        "product": 1,
+        "price": "200.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 5,
+    "fields": {
+        "order": 7,
+        "product": 1,
+        "price": "200.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 6,
+    "fields": {
+        "order": 8,
+        "product": 1,
+        "price": "200.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 7,
+    "fields": {
+        "order": 9,
+        "product": 1,
+        "price": "200.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 8,
+    "fields": {
+        "order": 10,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 9,
+    "fields": {
+        "order": 11,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 3
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 10,
+    "fields": {
+        "order": 12,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 11,
+    "fields": {
+        "order": 13,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 16,
+    "fields": {
+        "order": 8,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 17,
+    "fields": {
+        "order": 8,
+        "product": 3,
+        "price": "150.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 18,
+    "fields": {
+        "order": 13,
+        "product": 3,
+        "price": "150.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 19,
+    "fields": {
+        "order": 18,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 4
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 20,
+    "fields": {
+        "order": 19,
+        "product": 3,
+        "price": "150.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 21,
+    "fields": {
+        "order": 20,
+        "product": 3,
+        "price": "150.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 22,
+    "fields": {
+        "order": 21,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 3
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 23,
+    "fields": {
+        "order": 22,
+        "product": 4,
+        "price": "50.00",
+        "quantity": 2
+    }
+}
+]
